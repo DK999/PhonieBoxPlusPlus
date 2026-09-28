@@ -1,0 +1,74 @@
+{
+    "volume": {
+        "tags": {
+            "00": {
+                "type": "VOLUME_INCREASE",
+                "amount": 0.05,
+                "description": "Increase volume by 5%"
+            },
+            "01": {
+                "type": "VOLUME_DECREASE",
+                "amount": 0.05,
+                "description": "Decrease volume by 5%"
+            },
+            "02": {
+                "type": "MUTE",
+                "description": "Mute audio"
+            },
+            "03": {
+                "type": "UNMUTE",
+                "description": "Unmute audio"
+            }
+        }
+    },
+    "library": {
+        "tags": {
+            "10": {
+                "type": "FILE",
+                "file": "/usr/share/sounds/alert.wav",
+                "description": "Piper - Cool Selection - Summer Breeze"
+            }
+        }
+    },
+    "media": {
+        "tags": {
+            "20": {
+                "type": "STOP_AUDIO",
+                "description": "Stop Playback"
+            },
+            "21": {
+                "type": "PAUSE_AUDIO",
+                "description": "Pause Playback"
+            },
+            "22": {
+                "type": "RESUME_AUDIO",
+                "description": "Resume playback"
+            },
+            "23": {
+                "type": "NEXT_TITLE",
+                "description": "Skip to next track"
+            },
+            "24": {
+                "type": "PREVIOUS_TITLE",
+                "description": "Jump to previous track"
+            },
+            "25": {
+                "type": "REPEAT_TITLE",
+                "description": "Start from beginning"
+            }
+        }
+    },
+    "system": {
+        "tags": {
+            "90": {
+                "type": "SHUTDOWN"
+            },
+            "91": {
+                "type": "RELOAD_CONFIGS"
+            },
+            "92": {
+                "type": "RELOAD_LIBRARY"
+            }
+        }
+    }
+}

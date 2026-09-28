@@ -1,0 +1,195 @@
+{
+    "types": {
+        "MEDIA": {
+            "FILE": {
+                "parameters": {
+                    "file": {
+                        "type": "string",
+                        "required": true
+                    },
+                    "loop": {
+                        "type": "boolean",
+                        "required": false,
+                        "default": false
+                    }
+                }
+            },
+            "STOP_AUDIO": {
+                "parameters": {}
+            },
+            "PAUSE_AUDIO": {
+                "parameters": {}
+            },
+            "RESUME_AUDIO": {
+                "parameters": {}
+            },
+            "NEXT_TITLE": {
+                "parameters": {}
+            },
+            "PREVIOUS_TITLE": {
+                "parameters": {}
+            },
+            "REPEAT_TITLE": {
+                "parameters": {
+                    "enabled": {
+                        "type": "boolean",
+                        "required": false,
+                        "default": false
+                    }
+                }
+            }
+        },
+        "SYSTEM": {
+            "SHUTDOWN": {
+                "parameters": {
+                    "delay_seconds": {
+                        "type": "integer",
+                        "required": false,
+                        "default": 0
+                    }
+                }
+            },
+            "RELOAD_CONFIGS": {
+                "parameters": {}
+            },
+            "RELOAD_LIBRARY": {
+                "parameters": {}
+            }
+        },
+        "VOLUME": {
+            "VOLUME_INCREASE": {
+                "parameters": {
+                    "amount": {
+                        "type": "number",
+                        "required": false,
+                        "default": 0.1
+                    }
+                }
+            },
+            "VOLUME_DECREASE": {
+                "parameters": {
+                    "amount": {
+                        "type": "number",
+                        "required": false,
+                        "default": 0.1
+                    }
+                }
+            },
+            "MUTE": {
+                "parameters": {}
+            },
+            "UNMUTE": {
+                "parameters": {}
+            }
+        }
+    },
+    "statuses": {
+        "MEDIA": {
+            "PLAYBACK_STARTED": {
+                "parameters": {
+                    "title": {
+                        "type": "string",
+                        "required": true
+                    },
+                    "tag_id": {
+                        "type": "string",
+                        "required": false
+                    }
+                }
+            },
+            "PLAYBACK_ENDED": {
+                "parameters": {
+                    "title": {
+                        "type": "string",
+                        "required": true
+                    }
+                }
+            },
+            "PLAYBACK_PAUSED": {
+                "parameters": {
+                    "title": {
+                        "type": "string",
+                        "required": false
+                    }
+                }
+            },
+            "PLAYBACK_RESUMED": {
+                "parameters": {
+                    "title": {
+                        "type": "string",
+                        "required": false
+                    }
+                }
+            }
+        },
+        "VOLUME": {
+            "VOLUME_CHANGED": {
+                "parameters": {
+                    "volume": {
+                        "type": "number",
+                        "required": true
+                    },
+                    "muted": {
+                        "type": "boolean",
+                        "required": false,
+                        "default": false
+                    }
+                }
+            }
+        },
+        "SYSTEM": {
+            "SYSTEM_READY": {
+                "parameters": {}
+            },
+            "SYSTEM_SHUTDOWN": {
+                "parameters": {}
+            },
+            "ERROR": {
+                "parameters": {
+                    "code": {
+                        "type": "integer",
+                        "required": true
+                    },
+                    "message": {
+                        "type": "string",
+                        "required": true
+                    }
+                }
+            }
+        }
+    },
+    "systems": [
+        "LIBRARY",
+        "MEDIA",
+        "SYSTEM",
+        "VOLUME",
+        "RFID_READER",
+        "WEB"
+    ],
+    "sockets": {
+        "SYSTEM": {
+            "command": "ipc:///tmp/system_commands.ipc",
+            "status": "ipc:///tmp/system_status.ipc"
+        },
+        "VOLUME": {
+            "command": "ipc:///tmp/volume_commands.ipc",
+            "status": "ipc:///tmp/volume_status.ipc"
+        },
+        "MEDIA": {
+            "command": "ipc:///tmp/media_commands.ipc",
+            "status": "ipc:///tmp/media_status.ipc"
+        },
+        "LIBRARY": {
+            "command": "ipc:///tmp/library_commands.ipc",
+            "status": "ipc:///tmp/library_status.ipc"
+        },
+        "RFID_READER": {
+            "command": "ipc:///tmp/rfid_reader_commands.ipc",
+            "status": "ipc:///tmp/rfid_reader_status.ipc"
+        },
+        "WEB": {
+            "command": "ipc:///tmp/web_commands.ipc",
+            "status": "ipc:///tmp/web_status.ipc"
+        }
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "tags": {
+        "00": {
+            "type": "VOLUME_INCREASE",
+            "amount": 0.05,
+            "description": "Increase volume by 5%"
+        },
+        "01": {
+            "type": "VOLUME_DECREASE",
+            "amount": 0.05,
+            "description": "Decrease volume by 5%"
+        },
+        "02": {
+            "type": "MUTE",
+            "description": "Mute audio"
+        },
+        "03": {
+            "type": "UNMUTE",
+            "description": "Unmute audio"
+        }
+    }
+}

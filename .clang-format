@@ -1,0 +1,20 @@
+---
+BasedOnStyle: LLVM
+AlignEscapedNewlines: DontAlign
+AlignOperands: Align
+AlignTrailingComments:
+  Kind: Always
+  OverEmptyLines: 0
+AllowShortBlocksOnASingleLine: Always
+AllowShortIfStatementsOnASingleLine: WithoutElse
+AllowShortCaseLabelsOnASingleLine: false
+BraceWrapping:
+  AfterClass: true
+  AfterEnum: true
+Language: Cpp
+LineEnding: DeriveLF
+Standard: c++20
+IndentWidth: 4
+UseTab: Never
+Exclude:
+  - "*.py"

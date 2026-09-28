@@ -1,0 +1,7 @@
+{
+    "C_Cpp.formatting": "clangFormat",
+    "clang-format.style": "file",
+    "editor.formatOnSave": true,
+    "cmake.configureOnOpen": true,
+    "plantuml.jarPath": "/home/dk/.local/share/plantuml/plantuml.jar"
+}

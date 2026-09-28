@@ -1,0 +1,28 @@
+{
+    "tags": {
+        "20": {
+            "type": "STOP_AUDIO",
+            "description": "Stop Playback"
+        },
+        "21": {
+            "type": "PAUSE_AUDIO",
+            "description": "Pause Playback"
+        },
+        "22": {
+            "type": "RESUME_AUDIO",
+            "description": "Resume playback"
+        },
+        "23": {
+            "type": "NEXT_TITLE",
+            "description": "Skip to next track"
+        },
+        "24": {
+            "type": "PREVIOUS_TITLE",
+            "description": "Jump to previous track"
+        },
+        "25": {
+            "type": "REPEAT_TITLE",
+            "description": "Start from beginning"
+        }
+    }
+}

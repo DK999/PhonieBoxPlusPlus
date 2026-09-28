@@ -1,0 +1,9 @@
+{
+    "tags": {
+        "10": {
+            "type": "FILE",
+            "file": "/usr/share/sounds/alert.wav",
+            "description": "Test sound file"
+        }
+    }
+}

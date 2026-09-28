@@ -1,0 +1,91 @@
+{
+    "version": 3,
+    "configurePresets": [
+        {
+            "name": "ConfigGeneral",
+            "hidden": true,
+            "description": "Sets generator, build and install directory",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build/${presetName}",
+            "installDir": "${sourceDir}/install/${presetName}",
+            "cacheVariables": {
+                "CMAKE_C_COMPILER": "clang",
+                "CMAKE_CXX_COMPILER": "clang++",
+                "CMAKE_EXPORT_COMPILE_COMMANDS": "true"
+            }
+        },
+        {
+            "name": "Release",
+            "displayName": "Release",
+            "inherits": "ConfigGeneral",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release"
+            }
+        },
+        {
+            "name": "Debug",
+            "displayName": "Debug",
+            "inherits": "ConfigGeneral",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug"
+            }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "BuildTargets",
+            "hidden": true,
+            "targets": [
+                "install",
+                "media_controller",
+                "rfid_reader",
+                "rfid_parser",
+                "volume_controller",
+                "all"
+            ]
+        },
+        {
+            "name": "TestTargets",
+            "hidden": true,
+            "targets": [
+                "rfid_unit_tests",
+                "rfid_integration_tests"
+            ]
+        },
+        {
+            "name": "Release",
+            "inherits": "BuildTargets",
+            "configurePreset": "Release",
+            "description": "Build in release config",
+            "displayName": "Build Release"
+        },
+        {
+            "name": "Debug",
+            "inherits": "BuildTargets",
+            "configurePreset": "Debug",
+            "description": "Build in debug config",
+            "displayName": "Build Debug"
+        },
+        {
+            "name": "TestRelease",
+            "inherits": "TestTargets",
+            "configurePreset": "Release",
+            "description": "Build in release config",
+            "displayName": "Build TestRelease"
+        }
+    ],
+    "testPresets": [
+        {
+            "name": "Test Release all",
+            "description": "Test that tests everything",
+            "displayName": "Test Release all",
+            "configurePreset": "Release"
+        },
+        {
+            "name": "Test Debug all",
+            "description": "Test Debug",
+            "displayName": "Test Debug all",
+            "configurePreset": "Debug"
+        }
+    ]
+}

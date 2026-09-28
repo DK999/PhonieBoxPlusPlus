@@ -1,0 +1,13 @@
+{
+    "tags": {
+        "90": {
+            "type": "SHUTDOWN"
+        },
+        "91": {
+            "type": "RELOAD_CONFIGS"
+        },
+        "92": {
+            "type": "RELOAD_LIBRARY"
+        }
+    }
+}

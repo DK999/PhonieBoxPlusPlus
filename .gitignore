@@ -1,0 +1,6 @@
+.cache/
+build/
+install/
+compile_commands.json
+*.bak
+tools/__pycache__/
